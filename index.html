@@ -64,7 +64,9 @@
     nav .logo {
       font-weight: 800; font-size: 1.15rem; letter-spacing: -0.5px;
       color: var(--text);
+      display: flex; align-items: center; gap: 10px;
     }
+    nav .logo svg { height: 36px; width: auto; flex-shrink: 0; }
     nav .logo span { color: var(--jade); }
     nav .nav-links { display: flex; gap: 28px; list-style: none; }
     nav .nav-links a {
@@ -593,7 +595,9 @@
     }
     .footer-brand h4 {
       font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;
+      display: flex; align-items: center; gap: 10px;
     }
+    .footer-brand h4 svg { height: 44px; width: auto; flex-shrink: 0; }
     .footer-brand h4 span { color: var(--jade); }
     .footer-brand p { font-size: .82rem; color: var(--text-dim); line-height: 1.6; }
 
@@ -663,7 +667,33 @@
 <!-- ════════ NAV ════════ -->
 <nav>
   <div class="nav-inner">
-    <div class="logo"><span>20-80</span> Initiative</div>
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 30 480 640" aria-hidden="true">
+        <defs>
+          <linearGradient id="hgGlass" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a6b4a"/><stop offset="50%" stop-color="#0d3d2b"/><stop offset="100%" stop-color="#1a6b4a"/></linearGradient>
+          <linearGradient id="hgSandT" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f4c542"/><stop offset="100%" stop-color="#e8a817"/></linearGradient>
+          <linearGradient id="hgSandB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8a817"/><stop offset="100%" stop-color="#d4941a"/></linearGradient>
+          <filter id="hgGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <clipPath id="hgTopB"><path d="M190,160 Q190,100 220,80 L380,80 Q410,100 410,160 L410,240 Q410,300 300,340 Q190,300 190,240Z"/></clipPath>
+          <clipPath id="hgBotB"><path d="M300,360 Q410,400 410,460 L410,540 Q410,600 380,620 L220,620 Q190,600 190,540 L190,460 Q190,400 300,360Z"/></clipPath>
+        </defs>
+        <path d="M185,150 Q185,75 230,55 L370,55 Q415,75 415,150 L415,245 Q415,310 300,350 Q185,310 185,245Z" fill="none" stroke="url(#hgGlass)" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M300,350 Q415,390 415,455 L415,550 Q415,625 370,645 L230,645 Q185,625 185,550 L185,455 Q185,390 300,350Z" fill="none" stroke="url(#hgGlass)" stroke-width="5" stroke-linejoin="round"/>
+        <rect x="160" y="42" width="280" height="14" rx="7" fill="#2a8c62"/><rect x="160" y="644" width="280" height="14" rx="7" fill="#2a8c62"/>
+        <g clip-path="url(#hgTopB)"><path d="M190,190 Q190,180 220,175 L380,175 Q410,180 410,190 L410,240 Q410,300 300,340 Q190,300 190,240Z" fill="url(#hgSandT)" opacity=".85"/></g>
+        <rect x="297" y="310" width="6" height="80" rx="3" fill="#e8a817" opacity=".9"/>
+        <g clip-path="url(#hgBotB)"><path d="M190,520 Q190,470 250,450 L300,440 L350,450 Q410,470 410,520 L410,540 Q410,600 380,620 L220,620 Q190,600 190,540Z" fill="url(#hgSandB)" opacity=".85"/></g>
+        <g fill="#f4c542" filter="url(#hgGlow)">
+          <circle cx="300" cy="325" r="2.5" opacity=".9"><animate attributeName="cy" values="325;385" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values=".9;0" dur="1.5s" repeatCount="indefinite"/></circle>
+          <circle cx="298" cy="345" r="2" opacity=".7"><animate attributeName="cy" values="345;400" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;0" dur="1.8s" repeatCount="indefinite"/></circle>
+          <circle cx="302" cy="335" r="1.8" opacity=".8"><animate attributeName="cy" values="335;390" dur="1.3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="1.3s" repeatCount="indefinite"/></circle>
+        </g>
+        <text x="300" y="145" text-anchor="middle" font-family="Georgia,serif" font-size="80" font-weight="bold" fill="#f4c542" letter-spacing="4" filter="url(#hgGlow)">20</text>
+        <text x="300" y="590" text-anchor="middle" font-family="Georgia,serif" font-size="80" font-weight="bold" fill="#2a8c62" letter-spacing="4" filter="url(#hgGlow)">80</text>
+        <line x1="280" y1="350" x2="320" y2="350" stroke="#f4c542" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+      </svg>
+      <span>20-80</span> Initiative
+    </div>
     <ul class="nav-links">
       <li><a href="#graphs">Graphs</a></li>
       <li><a href="#howwhy">HOW / WHY</a></li>
@@ -1186,7 +1216,33 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <h4><span>20-80</span> Initiative</h4>
+        <h4>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 30 480 640" aria-hidden="true">
+            <defs>
+              <linearGradient id="fhgGlass" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a6b4a"/><stop offset="50%" stop-color="#0d3d2b"/><stop offset="100%" stop-color="#1a6b4a"/></linearGradient>
+              <linearGradient id="fhgSandT" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f4c542"/><stop offset="100%" stop-color="#e8a817"/></linearGradient>
+              <linearGradient id="fhgSandB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8a817"/><stop offset="100%" stop-color="#d4941a"/></linearGradient>
+              <filter id="fhgGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <clipPath id="fhgTopB"><path d="M190,160 Q190,100 220,80 L380,80 Q410,100 410,160 L410,240 Q410,300 300,340 Q190,300 190,240Z"/></clipPath>
+              <clipPath id="fhgBotB"><path d="M300,360 Q410,400 410,460 L410,540 Q410,600 380,620 L220,620 Q190,600 190,540 L190,460 Q190,400 300,360Z"/></clipPath>
+            </defs>
+            <path d="M185,150 Q185,75 230,55 L370,55 Q415,75 415,150 L415,245 Q415,310 300,350 Q185,310 185,245Z" fill="none" stroke="url(#fhgGlass)" stroke-width="5" stroke-linejoin="round"/>
+            <path d="M300,350 Q415,390 415,455 L415,550 Q415,625 370,645 L230,645 Q185,625 185,550 L185,455 Q185,390 300,350Z" fill="none" stroke="url(#fhgGlass)" stroke-width="5" stroke-linejoin="round"/>
+            <rect x="160" y="42" width="280" height="14" rx="7" fill="#2a8c62"/><rect x="160" y="644" width="280" height="14" rx="7" fill="#2a8c62"/>
+            <g clip-path="url(#fhgTopB)"><path d="M190,190 Q190,180 220,175 L380,175 Q410,180 410,190 L410,240 Q410,300 300,340 Q190,300 190,240Z" fill="url(#fhgSandT)" opacity=".85"/></g>
+            <rect x="297" y="310" width="6" height="80" rx="3" fill="#e8a817" opacity=".9"/>
+            <g clip-path="url(#fhgBotB)"><path d="M190,520 Q190,470 250,450 L300,440 L350,450 Q410,470 410,520 L410,540 Q410,600 380,620 L220,620 Q190,600 190,540Z" fill="url(#fhgSandB)" opacity=".85"/></g>
+            <g fill="#f4c542" filter="url(#fhgGlow)">
+              <circle cx="300" cy="325" r="2.5" opacity=".9"><animate attributeName="cy" values="325;385" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values=".9;0" dur="1.5s" repeatCount="indefinite"/></circle>
+              <circle cx="298" cy="345" r="2" opacity=".7"><animate attributeName="cy" values="345;400" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;0" dur="1.8s" repeatCount="indefinite"/></circle>
+              <circle cx="302" cy="335" r="1.8" opacity=".8"><animate attributeName="cy" values="335;390" dur="1.3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="1.3s" repeatCount="indefinite"/></circle>
+            </g>
+            <text x="300" y="145" text-anchor="middle" font-family="Georgia,serif" font-size="80" font-weight="bold" fill="#f4c542" letter-spacing="4" filter="url(#fhgGlow)">20</text>
+            <text x="300" y="590" text-anchor="middle" font-family="Georgia,serif" font-size="80" font-weight="bold" fill="#2a8c62" letter-spacing="4" filter="url(#fhgGlow)">80</text>
+            <line x1="280" y1="350" x2="320" y2="350" stroke="#f4c542" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+          </svg>
+          <span>20-80</span> Initiative
+        </h4>
         <p>Rewriting the rules of aging through evidence-based protocols, community, and relentless curiosity.
         This is not medical advice. Check-ups are mandatory.</p>
       </div>
