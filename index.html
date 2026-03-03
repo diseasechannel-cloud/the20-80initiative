@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-Show less
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>20-80 Initiative — Rewrite the Rules of Aging</title>
@@ -10,6 +9,7 @@ Show less
        RESET & BASE
     ═══════════════════════════════════════ */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
     :root {
       --jade: #00b87a;
       --jade-dim: #007a52;
@@ -27,8 +27,11 @@ Show less
       --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
     }
+
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
     html { scroll-behavior: smooth; }
+
     body {
       font-family: var(--font);
       background: var(--bg);
@@ -36,9 +39,12 @@ Show less
       line-height: 1.6;
       overflow-x: hidden;
     }
+
     a { color: var(--jade); text-decoration: none; transition: color .2s; }
     a:hover { color: var(--gold); }
+
     .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
     /* ═══════════════════════════════════════
        NAV
     ═══════════════════════════════════════ */
@@ -66,16 +72,19 @@ Show less
       transition: color .2s;
     }
     nav .nav-links a:hover { color: var(--jade); }
+
     .nav-cta {
       background: var(--jade); color: #000 !important; font-weight: 600;
       padding: 8px 20px; border-radius: 8px; font-size: .85rem;
       transition: transform .15s, background .2s;
     }
     .nav-cta:hover { background: var(--gold); transform: translateY(-1px); color: #000 !important; }
+
     .hamburger {
       display: none; background: none; border: none; color: var(--text);
       font-size: 1.5rem; cursor: pointer;
     }
+
     /* ═══════════════════════════════════════
        HERO
     ═══════════════════════════════════════ */
@@ -87,6 +96,7 @@ Show less
       position: relative;
       overflow: hidden;
     }
+
     .hero::before {
       content: '';
       position: absolute; inset: 0;
@@ -95,6 +105,7 @@ Show less
         radial-gradient(ellipse 40% 40% at 70% 60%, rgba(220,53,69,.05), transparent);
       pointer-events: none;
     }
+
     .hero-video-placeholder {
       width: 100%; max-width: 900px;
       aspect-ratio: 16/9;
@@ -109,6 +120,7 @@ Show less
       transition: border-color .3s;
     }
     .hero-video-placeholder:hover { border-color: var(--jade); }
+
     .play-btn {
       width: 80px; height: 80px;
       background: rgba(0,184,122,.15);
@@ -119,11 +131,13 @@ Show less
     }
     .play-btn:hover { transform: scale(1.1); background: rgba(0,184,122,.25); }
     .play-btn svg { fill: var(--jade); width: 32px; height: 32px; margin-left: 4px; }
+
     .hero-video-label {
       position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
       font-size: .8rem; color: var(--text-dim);
       background: rgba(10,10,15,.7); padding: 4px 14px; border-radius: 20px;
     }
+
     .hero h1 {
       font-size: clamp(2.4rem, 6vw, 4.5rem);
       font-weight: 900; letter-spacing: -2px;
@@ -132,15 +146,18 @@ Show less
     }
     .hero h1 .accent { color: var(--jade); }
     .hero h1 .accent-red { color: var(--crimson); }
+
     .hero-sub {
       font-size: clamp(1rem, 2vw, 1.25rem);
       color: var(--text-dim); max-width: 640px;
       margin-bottom: 36px; line-height: 1.6;
     }
+
     .hero-ctas {
       display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
       margin-bottom: 40px;
     }
+
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 14px 32px; border-radius: 12px; font-weight: 600;
@@ -154,6 +171,7 @@ Show less
       border: 1px solid var(--border);
     }
     .btn-outline:hover { border-color: var(--jade); color: var(--jade); }
+
     .hero-pills {
       display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
     }
@@ -162,32 +180,39 @@ Show less
       padding: 6px 16px; border-radius: 20px;
       font-size: .78rem; color: var(--text-dim);
     }
+
     /* ═══════════════════════════════════════
        SECTIONS
     ═══════════════════════════════════════ */
     section { padding: 100px 0; }
+
     .section-label {
       text-transform: uppercase; letter-spacing: 3px; font-size: .72rem;
       color: var(--jade); font-weight: 600; margin-bottom: 12px;
     }
+
     .section-title {
       font-size: clamp(1.8rem, 4vw, 2.8rem);
       font-weight: 800; letter-spacing: -1px; margin-bottom: 16px;
     }
+
     .section-desc {
       color: var(--text-dim); font-size: 1.05rem; max-width: 600px;
       margin-bottom: 48px; line-height: 1.7;
     }
+
     /* ═══════════════════════════════════════
        GRAPHS SECTION
     ═══════════════════════════════════════ */
     .graphs-section {
       background: linear-gradient(180deg, var(--bg) 0%, #0e0e18 100%);
     }
+
     .graphs-wrapper {
       display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
       margin-bottom: 32px;
     }
+
     .graph-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -201,6 +226,7 @@ Show less
     .graph-card .graph-subtitle {
       font-size: .82rem; color: var(--text-dim); margin-bottom: 20px;
     }
+
     .graph-canvas-wrap {
       width: 100%; aspect-ratio: 2/1.2;
       position: relative;
@@ -209,6 +235,7 @@ Show less
       width: 100%; height: 100%;
       display: block;
     }
+
     .age-slider-wrap {
       text-align: center; padding: 0 24px;
     }
@@ -221,6 +248,7 @@ Show less
       margin-bottom: 8px; display: block;
       font-variant-numeric: tabular-nums;
     }
+
     input[type="range"] {
       -webkit-appearance: none; appearance: none;
       width: 100%; max-width: 600px; height: 6px;
@@ -240,6 +268,7 @@ Show less
       background: var(--jade); border: 3px solid var(--bg);
       box-shadow: 0 0 12px rgba(0,184,122,.4);
     }
+
     .graph-insight {
       text-align: center; margin-top: 24px;
       padding: 20px; background: var(--bg-card);
@@ -253,12 +282,14 @@ Show less
     .graph-insight strong { color: var(--text); }
     .graph-insight .highlight { color: var(--jade); font-weight: 600; }
     .graph-insight .highlight-red { color: var(--crimson); font-weight: 600; }
+
     /* ═══════════════════════════════════════
        NEWSFLASH
     ═══════════════════════════════════════ */
     .newsflash {
       background: linear-gradient(135deg, rgba(0,184,122,.06), rgba(220,53,69,.04));
     }
+
     .newsflash-card {
       background: var(--bg-card);
       border: 1px solid var(--jade-dim);
@@ -276,6 +307,7 @@ Show less
       padding: 4px 40px; transform: rotate(45deg);
       letter-spacing: 2px;
     }
+
     .newsflash-card h3 {
       font-size: 1.5rem; font-weight: 800; margin-bottom: 12px;
     }
@@ -290,6 +322,7 @@ Show less
     @keyframes newsflashPulse {
       0%, 100% { opacity: .4; } 50% { opacity: 1; }
     }
+
     /* ═══════════════════════════════════════
        COMMUNITY
     ═══════════════════════════════════════ */
@@ -314,15 +347,18 @@ Show less
       line-height: 1.7;
     }
     .community-quote span { color: var(--text); font-weight: 500; }
+
     /* ═══════════════════════════════════════
        HOW / WHY SPLIT
     ═══════════════════════════════════════ */
     .howwhy-section {
       background: linear-gradient(180deg, #0e0e18 0%, var(--bg) 100%);
     }
+
     .howwhy-grid {
       display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
     }
+
     .howwhy-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -332,6 +368,7 @@ Show less
     }
     .howwhy-card:hover { border-color: var(--jade); transform: translateY(-2px); }
     .howwhy-card.why-card:hover { border-color: var(--crimson); }
+
     .howwhy-card .card-icon {
       width: 48px; height: 48px; border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
@@ -339,14 +376,17 @@ Show less
     }
     .how-card .card-icon { background: rgba(0,184,122,.12); }
     .why-card .card-icon { background: rgba(220,53,69,.12); }
+
     .howwhy-card h3 {
       font-size: 1.6rem; font-weight: 800; margin-bottom: 6px;
     }
     .how-card h3 { color: var(--jade); }
     .why-card h3 { color: var(--crimson); }
+
     .howwhy-card .card-tagline {
       font-size: .88rem; color: var(--text-dim); margin-bottom: 24px;
     }
+
     .protocol-list { list-style: none; }
     .protocol-list li {
       padding: 14px 0;
@@ -355,28 +395,32 @@ Show less
       font-size: .92rem;
     }
     .protocol-list li:last-child { border-bottom: none; }
+
     .evidence-badge {
       font-size: .65rem; font-weight: 600; text-transform: uppercase;
       letter-spacing: 1px; padding: 3px 8px; border-radius: 4px;
       white-space: nowrap; flex-shrink: 0; margin-top: 2px;
     }
-Show less
     .badge-human { background: rgba(0,184,122,.15); color: var(--jade); }
     .badge-animal { background: rgba(240,192,64,.15); color: var(--gold); }
     .badge-experimental { background: rgba(220,53,69,.15); color: var(--crimson); }
+
     .protocol-list .item-text { flex: 1; }
     .protocol-list .item-title { font-weight: 600; display: block; margin-bottom: 2px; }
     .protocol-list .item-desc { font-size: .8rem; color: var(--text-dim); }
+
     /* ═══════════════════════════════════════
        APP MOCKUP
     ═══════════════════════════════════════ */
     .app-section {
       background: linear-gradient(180deg, var(--bg), #0e0e18);
     }
+
     .app-grid {
       display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
       align-items: center;
     }
+
     .app-mockup {
       background: var(--bg-card); border: 1px solid var(--border);
       border-radius: 24px; padding: 32px; text-align: center;
@@ -390,6 +434,7 @@ Show less
       box-shadow: 0 0 40px rgba(0,184,122,.2);
     }
     .app-mockup h4 { font-size: 1.1rem; margin-bottom: 16px; }
+
     .checkin-bars { display: flex; flex-direction: column; gap: 12px; }
     .checkin-bar {
       display: flex; align-items: center; gap: 12px;
@@ -410,6 +455,7 @@ Show less
     .bar-sleep .bar-fill { background: #7c5cbf; width: 78%; }
     .bar-power .bar-fill { background: var(--jade); width: 65%; }
     .bar-nutrition .bar-fill { background: var(--gold); width: 82%; }
+
     .app-features li {
       padding: 10px 0; font-size: .92rem;
       border-bottom: 1px solid var(--border);
@@ -422,6 +468,7 @@ Show less
       align-items: center; justify-content: center;
       font-size: .85rem; flex-shrink: 0;
     }
+
     /* ═══════════════════════════════════════
        PILLCARE GRID
     ═══════════════════════════════════════ */
@@ -429,6 +476,7 @@ Show less
       display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 16px; margin-top: 40px;
     }
+
     .pill-card {
       background: var(--bg-card); border: 1px solid var(--border);
       border-radius: var(--radius-sm); padding: 22px;
@@ -436,6 +484,7 @@ Show less
       cursor: default;
     }
     .pill-card:hover { border-color: var(--jade); transform: translateY(-3px); }
+
     .pill-card .pill-icon {
       font-size: 1.8rem; margin-bottom: 10px; display: block;
     }
@@ -449,6 +498,7 @@ Show less
       font-size: .65rem; text-transform: uppercase; letter-spacing: 1px;
       font-weight: 600;
     }
+
     .pillcare-note {
       margin-top: 32px; padding: 20px;
       background: rgba(220,53,69,.06);
@@ -457,6 +507,7 @@ Show less
       font-size: .85rem; color: var(--text-dim);
     }
     .pillcare-note strong { color: var(--crimson); }
+
     /* ═══════════════════════════════════════
        INCENTIVES
     ═══════════════════════════════════════ */
@@ -474,6 +525,7 @@ Show less
     }
     .incentive-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
     .incentive-card p { font-size: .82rem; color: var(--text-dim); line-height: 1.5; }
+
     /* ═══════════════════════════════════════
        STORYBOARD TIMELINE
     ═══════════════════════════════════════ */
@@ -502,6 +554,7 @@ Show less
     }
     .timeline-item h4 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
     .timeline-item p { font-size: .85rem; color: var(--text-dim); }
+
     /* ═══════════════════════════════════════
        POSTULATES CTA
     ═══════════════════════════════════════ */
@@ -510,6 +563,7 @@ Show less
       background:
         radial-gradient(ellipse 50% 50% at 50% 50%, rgba(0,184,122,.06), transparent);
     }
+
     .postulate-list {
       list-style: none; max-width: 500px; margin: 0 auto 48px;
     }
@@ -525,6 +579,7 @@ Show less
       color: var(--jade); font-size: .8rem; font-weight: 600;
       margin-right: 12px;
     }
+
     /* ═══════════════════════════════════════
        FOOTER
     ═══════════════════════════════════════ */
@@ -541,6 +596,7 @@ Show less
     }
     .footer-brand h4 span { color: var(--jade); }
     .footer-brand p { font-size: .82rem; color: var(--text-dim); line-height: 1.6; }
+
     .footer-col h5 {
       font-size: .78rem; text-transform: uppercase; letter-spacing: 2px;
       color: var(--text-dim); margin-bottom: 12px;
@@ -549,11 +605,13 @@ Show less
     .footer-col li { margin-bottom: 8px; }
     .footer-col a { color: var(--text-dim); font-size: .85rem; }
     .footer-col a:hover { color: var(--jade); }
+
     .footer-bottom {
       text-align: center; padding-top: 24px;
       border-top: 1px solid var(--border);
       font-size: .75rem; color: var(--text-dim);
     }
+
     /* ═══════════════════════════════════════
        FADE-IN ANIMATION
     ═══════════════════════════════════════ */
@@ -562,6 +620,7 @@ Show less
       transition: opacity .7s ease, transform .7s ease;
     }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
+
     /* ═══════════════════════════════════════
        RESPONSIVE
     ═══════════════════════════════════════ */
@@ -580,6 +639,7 @@ Show less
       .hero h1 { font-size: 2rem; }
       section { padding: 60px 0; }
     }
+
     /* mobile nav overlay */
     .mobile-nav {
       display: none; position: fixed; inset: 0; z-index: 999;
@@ -599,6 +659,7 @@ Show less
   </style>
 </head>
 <body>
+
 <!-- ════════ NAV ════════ -->
 <nav>
   <div class="nav-inner">
@@ -613,6 +674,7 @@ Show less
     <button class="hamburger" onclick="document.getElementById('mobileNav').classList.add('open')">&#9776;</button>
   </div>
 </nav>
+
 <div class="mobile-nav" id="mobileNav">
   <button class="close-btn" onclick="this.parentElement.classList.remove('open')">&times;</button>
   <a href="#graphs" onclick="this.parentElement.classList.remove('open')">Graphs</a>
@@ -621,19 +683,24 @@ Show less
   <a href="#storyboard" onclick="this.parentElement.classList.remove('open')">Storyboard</a>
   <a href="#join" onclick="this.parentElement.classList.remove('open')">Join Initiative</a>
 </div>
+
 <!-- ════════ HERO ════════ -->
 <section class="hero" id="hero">
+
   <div class="hero-video-placeholder">
     <div class="play-btn">
       <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
     </div>
     <span class="hero-video-label">Your video goes here</span>
   </div>
+
   <h1>Rewrite the <span class="accent">rules</span><br>of <span class="accent-red">aging</span></h1>
+
   <p class="hero-sub">
     Protocols, community and research for people who refuse to accept the "default" 80 years.
     The first 20 are a tutorial. At 30 you finally know how to live — but the clock is already ticking.
   </p>
+
   <div class="hero-ctas">
     <button class="btn btn-primary" onclick="document.getElementById('hero').querySelector('.hero-video-placeholder').scrollIntoView({behavior:'smooth'})">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5,3 19,12 5,21" fill="currentColor"/></svg>
@@ -641,6 +708,7 @@ Show less
     </button>
     <a href="#howwhy" class="btn btn-outline">Explore HOW / WHY</a>
   </div>
+
   <div class="hero-pills">
     <span class="pill">Voice-first daily check-ins</span>
     <span class="pill">Evidence tiers</span>
@@ -648,6 +716,7 @@ Show less
     <span class="pill">Community research</span>
   </div>
 </section>
+
 <!-- ════════ GRAPHS ════════ -->
 <section class="graphs-section" id="graphs">
   <div class="container">
@@ -659,6 +728,7 @@ Show less
         Drag the slider to see where you stand — and what intervention can change.
       </p>
     </div>
+
     <div class="graphs-wrapper fade-in">
       <!-- Graph 1: Vitality -->
       <div class="graph-card">
@@ -668,6 +738,7 @@ Show less
           <canvas id="vitalityCanvas"></canvas>
         </div>
       </div>
+
       <!-- Graph 2: Social -->
       <div class="graph-card">
         <h3>Social Prime</h3>
@@ -677,17 +748,20 @@ Show less
         </div>
       </div>
     </div>
+
     <div class="age-slider-wrap fade-in">
       <label for="ageSlider">Your current age</label>
       <span class="age-value" id="ageDisplay">27</span>
       <input type="range" id="ageSlider" min="10" max="100" value="27" step="1">
     </div>
+
     <div class="graph-insight fade-in" id="graphInsight">
       At <strong>27</strong> — you're near <span class="highlight">peak vitality</span> and entering your <span class="highlight">social prime</span>.
       The window for maximum impact is open. Use it.
     </div>
   </div>
 </section>
+
 <!-- ════════ NEWSFLASH ════════ -->
 <section class="newsflash" id="newsflash">
   <div class="container">
@@ -707,6 +781,7 @@ Show less
     </div>
   </div>
 </section>
+
 <!-- ════════ COMMUNITY ════════ -->
 <section id="community">
   <div class="container">
@@ -714,6 +789,7 @@ Show less
       <div class="section-label">Community</div>
       <h2 class="section-title">This initiative is not about me.<br>It's about all of us.</h2>
     </div>
+
     <div class="community-grid fade-in">
       <div class="community-stat">
         <span class="stat-num" data-count="1240">0</span>
@@ -721,13 +797,14 @@ Show less
       </div>
       <div class="community-stat">
         <span class="stat-num" data-count="38">0</span>
-        </div>
+        <span class="stat-label">Cities represented</span>
+      </div>
       <div class="community-stat">
         <span class="stat-num" data-count="412">0</span>
-Show less
         <span class="stat-label">Budda avatars active</span>
       </div>
     </div>
+
     <div class="community-quote fade-in">
       &ldquo;When someone asks me <span>why I care about longevity</span>,
       I tell them: because I finally learned how to live
@@ -735,6 +812,7 @@ Show less
     </div>
   </div>
 </section>
+
 <!-- ════════ HOW / WHY ════════ -->
 <section class="howwhy-section" id="howwhy">
   <div class="container">
@@ -746,12 +824,15 @@ Show less
         that still need answers.
       </p>
     </div>
+
     <div class="howwhy-grid fade-in">
+
       <!-- HOW -->
       <div class="howwhy-card how-card">
         <div class="card-icon">&#9881;</div>
         <h3>HOW</h3>
         <p class="card-tagline">What already works — evidence-based protocols</p>
+
         <ul class="protocol-list">
           <li>
             <span class="evidence-badge badge-human">Human</span>
@@ -797,11 +878,13 @@ Show less
           </li>
         </ul>
       </div>
+
       <!-- WHY -->
       <div class="howwhy-card why-card">
         <div class="card-icon">&#10067;</div>
         <h3>WHY</h3>
         <p class="card-tagline">Unanswered questions that could change everything</p>
+
         <ul class="protocol-list">
           <li>
             <span class="evidence-badge badge-experimental">Research</span>
@@ -846,6 +929,7 @@ Show less
             </div>
           </li>
         </ul>
+
         <a href="#join" class="btn btn-outline" style="margin-top: 20px; width: 100%; justify-content: center;">
           Pick a question. Join the research circle.
         </a>
@@ -853,6 +937,7 @@ Show less
     </div>
   </div>
 </section>
+
 <!-- ════════ VOICE-FIRST APP ════════ -->
 <section class="app-section" id="app">
   <div class="container">
@@ -864,6 +949,7 @@ Show less
         One joker day per week. Verification required. No excuses.
       </p>
     </div>
+
     <div class="app-grid fade-in">
       <div class="app-mockup">
         <div class="avatar-circle">&#129497;</div>
@@ -886,6 +972,7 @@ Show less
           </div>
         </div>
       </div>
+
       <div>
         <ul class="app-features" style="list-style:none;">
           <li>
@@ -914,6 +1001,7 @@ Show less
     </div>
   </div>
 </section>
+
 <!-- ════════ PILLCARE ════════ -->
 <section id="pillcare">
   <div class="container">
@@ -925,6 +1013,7 @@ Show less
         with evidence level — so you know exactly what you're signing up for.
       </p>
     </div>
+
     <div class="pillcare-grid fade-in">
       <div class="pill-card">
         <span class="pill-icon">&#128138;</span>
@@ -975,12 +1064,14 @@ Show less
         <div class="pill-tier badge-human" style="display:inline-block; padding:2px 8px; border-radius:4px; font-size:.65rem; letter-spacing:1px; font-weight:600;">HUMAN DATA</div>
       </div>
     </div>
+
     <div class="pillcare-note fade-in">
       <strong>&#9888; Important:</strong> Before starting any protocol — complete a full check-up and lab panel.
       This is mandatory, not optional. PillCare is not medical advice.
     </div>
   </div>
 </section>
+
 <!-- ════════ SOCIAL INCENTIVES ════════ -->
 <section id="incentives">
   <div class="container">
@@ -991,6 +1082,7 @@ Show less
         Curate knowledge, share protocols, build courses — and get rewarded.
       </p>
     </div>
+
     <div class="incentive-row fade-in">
       <div class="incentive-card">
         <span class="inc-icon">&#127942;</span>
@@ -1010,6 +1102,7 @@ Show less
     </div>
   </div>
 </section>
+
 <!-- ════════ STORYBOARD ════════ -->
 <section id="storyboard">
   <div class="container">
@@ -1021,6 +1114,7 @@ Show less
         behind the 20-80 Initiative.
       </p>
     </div>
+
     <div class="timeline fade-in">
       <div class="timeline-item">
         <div class="tl-scene">Scene 1</div>
@@ -1058,22 +1152,26 @@ Show less
         <p>Back to the restaurant. Everyone is older — but they chose differently. Freeze frame. Title card.</p>
       </div>
     </div>
+
     <div style="text-align:center; margin-top:40px;" class="fade-in">
       <button class="btn btn-outline">&#128196; Download Storyboard PDF</button>
     </div>
   </div>
 </section>
+
 <!-- ════════ POSTULATES CTA ════════ -->
 <section class="postulates" id="join">
   <div class="container">
     <div class="section-label">The Postulates</div>
     <h2 class="section-title" style="margin-bottom: 40px;">What we ask of you</h2>
+
     <ol class="postulate-list">
       <li><span class="post-num">01</span> Share it</li>
       <li><span class="post-num">02</span> Contribute to it</li>
       <li><span class="post-num">03</span> Think about it</li>
       <li><span class="post-num">04</span> Don't ever forget about it</li>
     </ol>
+
     <div class="fade-in">
       <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
         <button class="btn btn-primary" style="font-size:1.1rem; padding:16px 40px;">Join the Initiative</button>
@@ -1082,6 +1180,7 @@ Show less
     </div>
   </div>
 </section>
+
 <!-- ════════ FOOTER ════════ -->
 <footer>
   <div class="container">
@@ -1099,10 +1198,9 @@ Show less
           <li><a href="#incentives">Marketplace</a></li>
           <li><a href="#">Research Log</a></li>
         </ul>
-</div>
+      </div>
       <div class="footer-col">
         <h5>Resources</h5>
-Show less
         <ul>
           <li><a href="#">Peptide Docs</a></li>
           <li><a href="#storyboard">Storyboard</a></li>
@@ -1126,24 +1224,29 @@ Show less
     </div>
   </div>
 </footer>
+
 <!-- ════════ JAVASCRIPT ════════ -->
 <script>
 (function() {
   'use strict';
+
   /* ─── GRAPH CONFIG ─── */
   const AGE_MIN = 10, AGE_MAX = 100;
+
   // Vitality curve: peaks ~22, gradual decline
   function vitalityCurve(age) {
     if (age <= 22) return 0.5 + 0.5 * (age / 22);
     const decay = Math.exp(-0.025 * (age - 22));
     return 0.3 + 0.7 * decay;
   }
+
   // With intervention: slower decline after 30
   function vitalityIntervention(age) {
     if (age <= 22) return 0.5 + 0.5 * (age / 22);
     const decay = Math.exp(-0.014 * (age - 22));
     return 0.35 + 0.65 * decay;
   }
+
   // Social prime: rises until ~35-40, then declines
   function socialCurve(age) {
     const peak = 38;
@@ -1153,6 +1256,7 @@ Show less
     }
     return 0.15 + 0.85 * Math.exp(-0.5 * Math.pow((age - peak) / sigma2, 2));
   }
+
   // Social with intervention
   function socialIntervention(age) {
     const peak = 42;
@@ -1162,6 +1266,7 @@ Show less
     }
     return 0.2 + 0.8 * Math.exp(-0.5 * Math.pow((age - peak) / sigma2, 2));
   }
+
   /* ─── GRAPH DRAWING ─── */
   function setupCanvas(canvas) {
     const dpr = window.devicePixelRatio || 1;
@@ -1174,12 +1279,15 @@ Show less
     ctx.scale(dpr, dpr);
     return { ctx, w: rect.width, h: rect.height };
   }
+
   function drawGraph(canvas, curveFn, interventionFn, currentAge, color, colorDim) {
     const { ctx, w, h } = setupCanvas(canvas);
     const pad = { top: 15, right: 15, bottom: 35, left: 40 };
     const gw = w - pad.left - pad.right;
     const gh = h - pad.top - pad.bottom;
+
     ctx.clearRect(0, 0, w, h);
+
     // Grid
     ctx.strokeStyle = 'rgba(42,42,58,0.5)';
     ctx.lineWidth = 1;
@@ -1190,6 +1298,7 @@ Show less
       ctx.lineTo(w - pad.right, y);
       ctx.stroke();
     }
+
     // Age labels
     ctx.fillStyle = '#6a6a7a';
     ctx.font = '11px Inter, sans-serif';
@@ -1198,11 +1307,13 @@ Show less
       const x = pad.left + ((age - AGE_MIN) / (AGE_MAX - AGE_MIN)) * gw;
       ctx.fillText(age, x, h - 8);
     }
+
     // Y labels
     ctx.textAlign = 'right';
     ctx.fillText('100%', pad.left - 6, pad.top + 4);
     ctx.fillText('50%', pad.left - 6, pad.top + gh / 2 + 4);
     ctx.fillText('0%', pad.left - 6, pad.top + gh + 4);
+
     // Draw main curve
     function drawCurve(fn, strokeColor, fillColor, dash) {
       ctx.beginPath();
@@ -1216,6 +1327,7 @@ Show less
         else ctx.lineTo(x, y);
       }
       ctx.stroke();
+
       // Fill under curve
       if (fillColor) {
         ctx.lineTo(pad.left + gw, pad.top + gh);
@@ -1226,12 +1338,15 @@ Show less
       }
       ctx.setLineDash([]);
     }
+
     drawCurve(curveFn, colorDim, color + '08');
     drawCurve(interventionFn, color, color + '12', [6, 4]);
+
     // Current age marker
     const markerX = pad.left + ((currentAge - AGE_MIN) / (AGE_MAX - AGE_MIN)) * gw;
     const markerY1 = pad.top + gh - curveFn(currentAge) * gh;
     const markerY2 = pad.top + gh - interventionFn(currentAge) * gh;
+
     // Vertical line
     ctx.strokeStyle = 'rgba(255,255,255,0.15)';
     ctx.lineWidth = 1;
@@ -1241,6 +1356,7 @@ Show less
     ctx.lineTo(markerX, pad.top + gh);
     ctx.stroke();
     ctx.setLineDash([]);
+
     // Dots
     [markerY1, markerY2].forEach((my, i) => {
       ctx.beginPath();
@@ -1251,11 +1367,13 @@ Show less
       ctx.lineWidth = 2;
       ctx.stroke();
     });
+
     // Age label on marker
     ctx.fillStyle = color;
     ctx.font = 'bold 12px Inter, sans-serif';
     ctx.textAlign = 'center';
     ctx.fillText(currentAge, markerX, pad.top - 2);
+
     // Value label
     const pctNormal = Math.round(curveFn(currentAge) * 100);
     const pctIntv = Math.round(interventionFn(currentAge) * 100);
@@ -1264,6 +1382,7 @@ Show less
     ctx.fillText(pctNormal + '%', markerX - 20, markerY1 - 10);
     ctx.fillStyle = color;
     ctx.fillText(pctIntv + '%', markerX + 20, markerY2 - 10);
+
     // Legend
     ctx.font = '10px Inter, sans-serif';
     const ly = h - 6;
@@ -1282,6 +1401,7 @@ Show less
     ctx.setLineDash([]);
     ctx.fillText('With intervention', pad.left + 110, ly);
   }
+
   /* ─── INSIGHTS ─── */
   function getInsight(age) {
     if (age < 18) {
@@ -1300,12 +1420,14 @@ Show less
       return `At <strong>${age}</strong> — the <span class="highlight-red">default trajectory</span> shows significant decline. But the <span class="highlight">intervention data</span> proves it's not inevitable. Every year of maintained vitality is a year of life truly lived.`;
     }
   }
+
   /* ─── INIT GRAPHS ─── */
   const vCanvas = document.getElementById('vitalityCanvas');
   const sCanvas = document.getElementById('socialCanvas');
   const slider = document.getElementById('ageSlider');
   const ageDisplay = document.getElementById('ageDisplay');
   const insightEl = document.getElementById('graphInsight');
+
   function renderAll() {
     const age = parseInt(slider.value);
     ageDisplay.textContent = age;
@@ -1313,10 +1435,13 @@ Show less
     drawGraph(sCanvas, socialCurve, socialIntervention, age, '#f0c040', '#b89830');
     insightEl.innerHTML = getInsight(age);
   }
+
   slider.addEventListener('input', renderAll);
   window.addEventListener('resize', renderAll);
+
   // Initial render with slight delay for fonts
   setTimeout(renderAll, 100);
+
   /* ─── FADE-IN OBSERVER ─── */
   const fadeEls = document.querySelectorAll('.fade-in');
   const observer = new IntersectionObserver((entries) => {
@@ -1326,7 +1451,9 @@ Show less
       }
     });
   }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
   fadeEls.forEach(el => observer.observe(el));
+
   /* ─── POSTULATE ANIMATION ─── */
   const postItems = document.querySelectorAll('.postulate-list li');
   const postObserver = new IntersectionObserver((entries) => {
@@ -1340,7 +1467,9 @@ Show less
       }
     });
   }, { threshold: 0.3 });
+
   if (postItems.length) postObserver.observe(postItems[0]);
+
   /* ─── COUNTER ANIMATION ─── */
   const statNums = document.querySelectorAll('.stat-num[data-count]');
   const counterObserver = new IntersectionObserver((entries) => {
@@ -1362,9 +1491,11 @@ Show less
       }
     });
   }, { threshold: 0.5 });
+
   statNums.forEach(el => counterObserver.observe(el));
+
 })();
 </script>
+
 </body>
 </html>
-
