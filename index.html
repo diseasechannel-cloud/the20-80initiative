@@ -62,7 +62,7 @@
       height: 64px;
     }
     nav .logo { display: flex; align-items: center; }
-    nav .logo svg { height: 44px; width: auto; }
+    nav .logo svg { height: 48px; width: auto; }
     nav .nav-links { display: flex; gap: 28px; list-style: none; }
     nav .nav-links a {
       color: var(--text-dim); font-size: .88rem; font-weight: 500;
@@ -589,7 +589,7 @@
       margin-bottom: 40px;
     }
     .footer-brand h4 { margin-bottom: 8px; }
-    .footer-brand h4 svg { height: 52px; width: auto; }
+    .footer-brand h4 svg { height: 56px; width: auto; }
     .footer-brand p { font-size: .82rem; color: var(--text-dim); line-height: 1.6; }
 
     .footer-col h5 {
@@ -659,20 +659,31 @@
 <nav>
   <div class="nav-inner">
     <div class="logo">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162 54" role="img" aria-label="20-80 Initiative">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 70" role="img" aria-label="20-80 Initiative">
         <defs>
-          <linearGradient id="nEcg" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#c49a20"/><stop offset="100%" stop-color="#2a8c62"/></linearGradient>
-          <filter id="nGlow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <linearGradient id="nInfGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#c9a020"/>
+            <stop offset="45%" stop-color="#a0922a"/>
+            <stop offset="55%" stop-color="#4a8c52"/>
+            <stop offset="100%" stop-color="#2a8c62"/>
+          </linearGradient>
         </defs>
-        <text x="2" y="32" font-family="Georgia,'Times New Roman',serif" font-size="36" font-weight="bold" fill="#c49a20" filter="url(#nGlow)">20</text>
-        <path d="M48,21 L56,21 L60,17 L63,21 L68,21 L71,3 L75,41 L78,15 L82,21 L92,21 L95,25 L99,21 L107,21" fill="none" stroke="url(#nEcg)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle r="3" fill="#2a8c62" opacity="0">
-          <animateMotion dur="2s" repeatCount="indefinite" path="M48,21 L56,21 L60,17 L63,21 L68,21 L71,3 L75,41 L78,15 L82,21 L92,21 L95,25 L99,21 L107,21"/>
-          <animate attributeName="fill" values="#c49a20;#2a8c62;#1a6c48" dur="2s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0;0.9;0.9;0.9;0" dur="2s" repeatCount="indefinite"/>
-        </circle>
-        <text x="111" y="32" font-family="Georgia,'Times New Roman',serif" font-size="36" font-weight="bold" fill="#2a8c62" filter="url(#nGlow)">80</text>
-        <text x="78" y="51" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="10.8" font-weight="400" fill="#6b7f99" letter-spacing="3">INITIATIVE</text>
+        <!-- Left loop (gold) -->
+        <ellipse cx="68" cy="30" rx="62" ry="26" fill="none" stroke="#c9a020" stroke-width="3.5"/>
+        <!-- Right loop (green) -->
+        <ellipse cx="152" cy="30" rx="62" ry="26" fill="none" stroke="#2a8c62" stroke-width="3.5"/>
+        <!-- Center crossover patch: hide overlap and redraw cross -->
+        <rect x="96" y="2" width="28" height="56" fill="white"/>
+        <line x1="96" y1="42" x2="124" y2="18" stroke="url(#nInfGrad)" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="96" y1="18" x2="124" y2="42" stroke="url(#nInfGrad)" stroke-width="3.5" stroke-linecap="round"/>
+        <!-- Green dot on left -->
+        <circle cx="8" cy="22" r="4" fill="#2a8c62"/>
+        <!-- "20" text -->
+        <text x="52" y="39" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" font-weight="bold" fill="#c9a020">20</text>
+        <!-- "80" text -->
+        <text x="168" y="39" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" font-weight="bold" fill="#2a8c62">80</text>
+        <!-- INITIATIVE label -->
+        <text x="110" y="66" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="400" fill="#7a8a9a" letter-spacing="6">INITIATIVE</text>
       </svg>
     </div>
     <ul class="nav-links">
@@ -1198,20 +1209,24 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <h4>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162 54" role="img" aria-label="20-80 Initiative">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 70" role="img" aria-label="20-80 Initiative">
             <defs>
-              <linearGradient id="fEcg" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#c49a20"/><stop offset="100%" stop-color="#2a8c62"/></linearGradient>
-              <filter id="fGlow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <linearGradient id="fInfGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#c9a020"/>
+                <stop offset="45%" stop-color="#a0922a"/>
+                <stop offset="55%" stop-color="#4a8c52"/>
+                <stop offset="100%" stop-color="#2a8c62"/>
+              </linearGradient>
             </defs>
-            <text x="2" y="32" font-family="Georgia,'Times New Roman',serif" font-size="36" font-weight="bold" fill="#c49a20" filter="url(#fGlow)">20</text>
-            <path d="M48,21 L56,21 L60,17 L63,21 L68,21 L71,3 L75,41 L78,15 L82,21 L92,21 L95,25 L99,21 L107,21" fill="none" stroke="url(#fEcg)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle r="3" fill="#2a8c62" opacity="0">
-              <animateMotion dur="2s" repeatCount="indefinite" path="M48,21 L56,21 L60,17 L63,21 L68,21 L71,3 L75,41 L78,15 L82,21 L92,21 L95,25 L99,21 L107,21"/>
-              <animate attributeName="fill" values="#c49a20;#2a8c62;#1a6c48" dur="2s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="0;0.9;0.9;0.9;0" dur="2s" repeatCount="indefinite"/>
-            </circle>
-            <text x="111" y="32" font-family="Georgia,'Times New Roman',serif" font-size="36" font-weight="bold" fill="#2a8c62" filter="url(#fGlow)">80</text>
-            <text x="78" y="51" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="10.8" font-weight="400" fill="#6b7f99" letter-spacing="3">INITIATIVE</text>
+            <ellipse cx="68" cy="30" rx="62" ry="26" fill="none" stroke="#c9a020" stroke-width="3.5"/>
+            <ellipse cx="152" cy="30" rx="62" ry="26" fill="none" stroke="#2a8c62" stroke-width="3.5"/>
+            <rect x="96" y="2" width="28" height="56" fill="white"/>
+            <line x1="96" y1="42" x2="124" y2="18" stroke="url(#fInfGrad)" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="96" y1="18" x2="124" y2="42" stroke="url(#fInfGrad)" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="8" cy="22" r="4" fill="#2a8c62"/>
+            <text x="52" y="39" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" font-weight="bold" fill="#c9a020">20</text>
+            <text x="168" y="39" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" font-weight="bold" fill="#2a8c62">80</text>
+            <text x="110" y="66" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="400" fill="#7a8a9a" letter-spacing="6">INITIATIVE</text>
           </svg>
         </h4>
         <p>Rewriting the rules of aging through evidence-based protocols, community, and relentless curiosity.
