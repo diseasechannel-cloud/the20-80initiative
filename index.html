@@ -11,17 +11,17 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --jade: #00b87a;
-      --jade-dim: #007a52;
+      --jade: #00a06a;
+      --jade-dim: #338a6a;
       --crimson: #dc3545;
-      --crimson-dim: #a82835;
-      --gold: #f0c040;
-      --bg: #0a0a0f;
-      --bg-card: #13131c;
-      --bg-card-hover: #1a1a28;
-      --text: #e8e8ee;
-      --text-dim: #9898a8;
-      --border: #2a2a3a;
+      --crimson-dim: #c0303f;
+      --gold: #d4a020;
+      --bg: #ffffff;
+      --bg-card: #f5f6f8;
+      --bg-card-hover: #ebedf0;
+      --text: #1a1a2e;
+      --text-dim: #5a5a72;
+      --border: #dfe1e6;
       --radius: 16px;
       --radius-sm: 10px;
       --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -50,7 +50,7 @@
     ═══════════════════════════════════════ */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: rgba(10,10,15,.82);
+      background: rgba(255,255,255,.88);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
       padding: 0 24px;
@@ -62,7 +62,7 @@
       height: 64px;
     }
     nav .logo { display: flex; align-items: center; }
-    nav .logo svg { height: 44px; width: auto; }
+    nav .logo svg { height: 48px; width: auto; }
     nav .nav-links { display: flex; gap: 28px; list-style: none; }
     nav .nav-links a {
       color: var(--text-dim); font-size: .88rem; font-weight: 500;
@@ -71,14 +71,14 @@
     nav .nav-links a:hover { color: var(--jade); }
 
     .nav-cta {
-      background: var(--jade); color: #000 !important; font-weight: 600;
+      background: var(--jade); color: #fff !important; font-weight: 600;
       padding: 8px 20px; border-radius: 8px; font-size: .85rem;
       transition: transform .15s, background .2s;
     }
-    .nav-cta:hover { background: var(--gold); transform: translateY(-1px); color: #000 !important; }
+    .nav-cta:hover { background: var(--gold); transform: translateY(-1px); color: #fff !important; }
 
     .hamburger {
-      display: none; background: none; border: none; color: var(--text);
+      display: none; background: none; border: none; color: var(--text-dim);
       font-size: 1.5rem; cursor: pointer;
     }
 
@@ -98,8 +98,8 @@
       content: '';
       position: absolute; inset: 0;
       background:
-        radial-gradient(ellipse 60% 50% at 50% 40%, rgba(0,184,122,.08), transparent),
-        radial-gradient(ellipse 40% 40% at 70% 60%, rgba(220,53,69,.05), transparent);
+        radial-gradient(ellipse 60% 50% at 50% 40%, rgba(0,160,106,.06), transparent),
+        radial-gradient(ellipse 40% 40% at 70% 60%, rgba(220,53,69,.04), transparent);
       pointer-events: none;
     }
 
@@ -120,19 +120,19 @@
 
     .play-btn {
       width: 80px; height: 80px;
-      background: rgba(0,184,122,.15);
+      background: rgba(0,160,106,.1);
       border: 2px solid var(--jade);
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       transition: transform .2s, background .2s;
     }
-    .play-btn:hover { transform: scale(1.1); background: rgba(0,184,122,.25); }
+    .play-btn:hover { transform: scale(1.1); background: rgba(0,160,106,.18); }
     .play-btn svg { fill: var(--jade); width: 32px; height: 32px; margin-left: 4px; }
 
     .hero-video-label {
       position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
-      font-size: .8rem; color: var(--text-dim);
-      background: rgba(10,10,15,.7); padding: 4px 14px; border-radius: 20px;
+      font-size: .8rem; color: #fff;
+      background: rgba(26,26,46,.6); padding: 4px 14px; border-radius: 20px;
     }
 
     .hero h1 {
@@ -161,8 +161,8 @@
       font-size: .95rem; transition: all .2s; border: none; cursor: pointer;
       font-family: var(--font);
     }
-    .btn-primary { background: var(--jade); color: #000; }
-    .btn-primary:hover { background: var(--gold); transform: translateY(-2px); color: #000; }
+    .btn-primary { background: var(--jade); color: #fff; }
+    .btn-primary:hover { background: var(--gold); transform: translateY(-2px); color: #fff; }
     .btn-outline {
       background: transparent; color: var(--text);
       border: 1px solid var(--border);
@@ -202,7 +202,7 @@
        GRAPHS SECTION
     ═══════════════════════════════════════ */
     .graphs-section {
-      background: linear-gradient(180deg, var(--bg) 0%, #0e0e18 100%);
+      background: linear-gradient(180deg, var(--bg) 0%, #f0f1f4 100%);
     }
 
     .graphs-wrapper {
@@ -255,15 +255,15 @@
     input[type="range"]::-webkit-slider-thumb {
       -webkit-appearance: none; appearance: none;
       width: 24px; height: 24px; border-radius: 50%;
-      background: var(--jade); border: 3px solid var(--bg);
-      box-shadow: 0 0 12px rgba(0,184,122,.4);
+      background: var(--jade); border: 3px solid #fff;
+      box-shadow: 0 0 12px rgba(0,160,106,.3);
       transition: transform .15s;
     }
     input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
     input[type="range"]::-moz-range-thumb {
       width: 24px; height: 24px; border-radius: 50%;
-      background: var(--jade); border: 3px solid var(--bg);
-      box-shadow: 0 0 12px rgba(0,184,122,.4);
+      background: var(--jade); border: 3px solid #fff;
+      box-shadow: 0 0 12px rgba(0,160,106,.3);
     }
 
     .graph-insight {
@@ -284,7 +284,7 @@
        NEWSFLASH
     ═══════════════════════════════════════ */
     .newsflash {
-      background: linear-gradient(135deg, rgba(0,184,122,.06), rgba(220,53,69,.04));
+      background: linear-gradient(135deg, rgba(0,160,106,.05), rgba(220,53,69,.03));
     }
 
     .newsflash-card {
@@ -349,7 +349,7 @@
        HOW / WHY SPLIT
     ═══════════════════════════════════════ */
     .howwhy-section {
-      background: linear-gradient(180deg, #0e0e18 0%, var(--bg) 100%);
+      background: linear-gradient(180deg, #f0f1f4 0%, var(--bg) 100%);
     }
 
     .howwhy-grid {
@@ -371,8 +371,8 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 1.4rem; margin-bottom: 16px;
     }
-    .how-card .card-icon { background: rgba(0,184,122,.12); }
-    .why-card .card-icon { background: rgba(220,53,69,.12); }
+    .how-card .card-icon { background: rgba(0,160,106,.1); }
+    .why-card .card-icon { background: rgba(220,53,69,.08); }
 
     .howwhy-card h3 {
       font-size: 1.6rem; font-weight: 800; margin-bottom: 6px;
@@ -398,9 +398,9 @@
       letter-spacing: 1px; padding: 3px 8px; border-radius: 4px;
       white-space: nowrap; flex-shrink: 0; margin-top: 2px;
     }
-    .badge-human { background: rgba(0,184,122,.15); color: var(--jade); }
-    .badge-animal { background: rgba(240,192,64,.15); color: var(--gold); }
-    .badge-experimental { background: rgba(220,53,69,.15); color: var(--crimson); }
+    .badge-human { background: rgba(0,160,106,.1); color: var(--jade); }
+    .badge-animal { background: rgba(212,160,32,.12); color: #a07800; }
+    .badge-experimental { background: rgba(220,53,69,.1); color: var(--crimson); }
 
     .protocol-list .item-text { flex: 1; }
     .protocol-list .item-title { font-weight: 600; display: block; margin-bottom: 2px; }
@@ -410,7 +410,7 @@
        APP MOCKUP
     ═══════════════════════════════════════ */
     .app-section {
-      background: linear-gradient(180deg, var(--bg), #0e0e18);
+      background: linear-gradient(180deg, var(--bg), #f0f1f4);
     }
 
     .app-grid {
@@ -428,14 +428,14 @@
       background: linear-gradient(135deg, var(--jade), var(--jade-dim));
       margin: 0 auto 20px; display: flex; align-items: center;
       justify-content: center; font-size: 2.5rem;
-      box-shadow: 0 0 40px rgba(0,184,122,.2);
+      box-shadow: 0 0 40px rgba(0,160,106,.15);
     }
     .app-mockup h4 { font-size: 1.1rem; margin-bottom: 16px; }
 
     .checkin-bars { display: flex; flex-direction: column; gap: 12px; }
     .checkin-bar {
       display: flex; align-items: center; gap: 12px;
-      background: rgba(255,255,255,.03); padding: 12px 16px;
+      background: rgba(0,0,0,.03); padding: 12px 16px;
       border-radius: 10px;
     }
     .checkin-bar .bar-label {
@@ -461,7 +461,7 @@
     .app-features li:last-child { border-bottom: none; }
     .app-features .feat-icon {
       width: 28px; height: 28px; border-radius: 8px;
-      background: rgba(0,184,122,.1); display: flex;
+      background: rgba(0,160,106,.08); display: flex;
       align-items: center; justify-content: center;
       font-size: .85rem; flex-shrink: 0;
     }
@@ -543,7 +543,7 @@
       content: '';
       position: absolute; left: -29px; top: 6px;
       width: 12px; height: 12px; border-radius: 50%;
-      background: var(--jade); border: 3px solid var(--bg);
+      background: var(--jade); border: 3px solid #fff;
     }
     .timeline-item .tl-scene {
       font-size: .7rem; text-transform: uppercase; letter-spacing: 2px;
@@ -558,7 +558,7 @@
     .postulates {
       text-align: center; padding: 120px 24px;
       background:
-        radial-gradient(ellipse 50% 50% at 50% 50%, rgba(0,184,122,.06), transparent);
+        radial-gradient(ellipse 50% 50% at 50% 50%, rgba(0,160,106,.05), transparent);
     }
 
     .postulate-list {
@@ -589,7 +589,7 @@
       margin-bottom: 40px;
     }
     .footer-brand h4 { margin-bottom: 8px; }
-    .footer-brand h4 svg { height: 52px; width: auto; }
+    .footer-brand h4 svg { height: 56px; width: auto; }
     .footer-brand p { font-size: .82rem; color: var(--text-dim); line-height: 1.6; }
 
     .footer-col h5 {
@@ -638,7 +638,7 @@
     /* mobile nav overlay */
     .mobile-nav {
       display: none; position: fixed; inset: 0; z-index: 999;
-      background: rgba(10,10,15,.96); backdrop-filter: blur(20px);
+      background: rgba(255,255,255,.97); backdrop-filter: blur(20px);
       flex-direction: column; align-items: center; justify-content: center;
       gap: 24px;
     }
@@ -659,20 +659,31 @@
 <nav>
   <div class="nav-inner">
     <div class="logo">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162 54" role="img" aria-label="20-80 Initiative">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 70" role="img" aria-label="20-80 Initiative">
         <defs>
-          <linearGradient id="nEcg" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#f4c542"/><stop offset="100%" stop-color="#2a8c62"/></linearGradient>
-          <filter id="nGlow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <linearGradient id="nInfGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#c9a020"/>
+            <stop offset="45%" stop-color="#a0922a"/>
+            <stop offset="55%" stop-color="#4a8c52"/>
+            <stop offset="100%" stop-color="#2a8c62"/>
+          </linearGradient>
         </defs>
-        <text x="2" y="32" font-family="Georgia,'Times New Roman',serif" font-size="36" font-weight="bold" fill="#f4c542" filter="url(#nGlow)">20</text>
-        <path d="M48,21 L56,21 L60,17 L63,21 L68,21 L71,3 L75,41 L78,15 L82,21 L92,21 L95,25 L99,21 L107,21" fill="none" stroke="url(#nEcg)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle r="3" fill="#2a8c62" opacity="0">
-          <animateMotion dur="2s" repeatCount="indefinite" path="M48,21 L56,21 L60,17 L63,21 L68,21 L71,3 L75,41 L78,15 L82,21 L92,21 L95,25 L99,21 L107,21"/>
-          <animate attributeName="fill" values="#f4c542;#3bb878;#2a8c62" dur="2s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0;0.9;0.9;0.9;0" dur="2s" repeatCount="indefinite"/>
-        </circle>
-        <text x="111" y="32" font-family="Georgia,'Times New Roman',serif" font-size="36" font-weight="bold" fill="#2a8c62" filter="url(#nGlow)">80</text>
-        <text x="78" y="51" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="10.8" font-weight="400" fill="#6b7f99" letter-spacing="3">INITIATIVE</text>
+        <!-- Left loop (gold) -->
+        <ellipse cx="68" cy="30" rx="62" ry="26" fill="none" stroke="#c9a020" stroke-width="3.5"/>
+        <!-- Right loop (green) -->
+        <ellipse cx="152" cy="30" rx="62" ry="26" fill="none" stroke="#2a8c62" stroke-width="3.5"/>
+        <!-- Center crossover patch: hide overlap and redraw cross -->
+        <rect x="96" y="2" width="28" height="56" fill="white"/>
+        <line x1="96" y1="42" x2="124" y2="18" stroke="url(#nInfGrad)" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="96" y1="18" x2="124" y2="42" stroke="url(#nInfGrad)" stroke-width="3.5" stroke-linecap="round"/>
+        <!-- Green dot on left -->
+        <circle cx="8" cy="22" r="4" fill="#2a8c62"/>
+        <!-- "20" text -->
+        <text x="52" y="39" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" font-weight="bold" fill="#c9a020">20</text>
+        <!-- "80" text -->
+        <text x="168" y="39" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" font-weight="bold" fill="#2a8c62">80</text>
+        <!-- INITIATIVE label -->
+        <text x="110" y="66" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="400" fill="#7a8a9a" letter-spacing="6">INITIATIVE</text>
       </svg>
     </div>
     <ul class="nav-links">
@@ -1198,20 +1209,24 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <h4>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162 54" role="img" aria-label="20-80 Initiative">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 70" role="img" aria-label="20-80 Initiative">
             <defs>
-              <linearGradient id="fEcg" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#f4c542"/><stop offset="100%" stop-color="#2a8c62"/></linearGradient>
-              <filter id="fGlow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <linearGradient id="fInfGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#c9a020"/>
+                <stop offset="45%" stop-color="#a0922a"/>
+                <stop offset="55%" stop-color="#4a8c52"/>
+                <stop offset="100%" stop-color="#2a8c62"/>
+              </linearGradient>
             </defs>
-            <text x="2" y="32" font-family="Georgia,'Times New Roman',serif" font-size="36" font-weight="bold" fill="#f4c542" filter="url(#fGlow)">20</text>
-            <path d="M48,21 L56,21 L60,17 L63,21 L68,21 L71,3 L75,41 L78,15 L82,21 L92,21 L95,25 L99,21 L107,21" fill="none" stroke="url(#fEcg)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle r="3" fill="#2a8c62" opacity="0">
-              <animateMotion dur="2s" repeatCount="indefinite" path="M48,21 L56,21 L60,17 L63,21 L68,21 L71,3 L75,41 L78,15 L82,21 L92,21 L95,25 L99,21 L107,21"/>
-              <animate attributeName="fill" values="#f4c542;#3bb878;#2a8c62" dur="2s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="0;0.9;0.9;0.9;0" dur="2s" repeatCount="indefinite"/>
-            </circle>
-            <text x="111" y="32" font-family="Georgia,'Times New Roman',serif" font-size="36" font-weight="bold" fill="#2a8c62" filter="url(#fGlow)">80</text>
-            <text x="78" y="51" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="10.8" font-weight="400" fill="#6b7f99" letter-spacing="3">INITIATIVE</text>
+            <ellipse cx="68" cy="30" rx="62" ry="26" fill="none" stroke="#c9a020" stroke-width="3.5"/>
+            <ellipse cx="152" cy="30" rx="62" ry="26" fill="none" stroke="#2a8c62" stroke-width="3.5"/>
+            <rect x="96" y="2" width="28" height="56" fill="white"/>
+            <line x1="96" y1="42" x2="124" y2="18" stroke="url(#fInfGrad)" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="96" y1="18" x2="124" y2="42" stroke="url(#fInfGrad)" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="8" cy="22" r="4" fill="#2a8c62"/>
+            <text x="52" y="39" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" font-weight="bold" fill="#c9a020">20</text>
+            <text x="168" y="39" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" font-weight="bold" fill="#2a8c62">80</text>
+            <text x="110" y="66" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="400" fill="#7a8a9a" letter-spacing="6">INITIATIVE</text>
           </svg>
         </h4>
         <p>Rewriting the rules of aging through evidence-based protocols, community, and relentless curiosity.
@@ -1316,7 +1331,7 @@
     ctx.clearRect(0, 0, w, h);
 
     // Grid
-    ctx.strokeStyle = 'rgba(42,42,58,0.5)';
+    ctx.strokeStyle = 'rgba(0,0,0,0.08)';
     ctx.lineWidth = 1;
     for (let i = 0; i <= 4; i++) {
       const y = pad.top + (gh / 4) * i;
@@ -1327,7 +1342,7 @@
     }
 
     // Age labels
-    ctx.fillStyle = '#6a6a7a';
+    ctx.fillStyle = '#7a7a8a';
     ctx.font = '11px Inter, sans-serif';
     ctx.textAlign = 'center';
     for (let age = 20; age <= 100; age += 20) {
@@ -1375,7 +1390,7 @@
     const markerY2 = pad.top + gh - interventionFn(currentAge) * gh;
 
     // Vertical line
-    ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+    ctx.strokeStyle = 'rgba(0,0,0,0.12)';
     ctx.lineWidth = 1;
     ctx.setLineDash([4, 4]);
     ctx.beginPath();
@@ -1390,7 +1405,7 @@
       ctx.arc(markerX, my, 6, 0, Math.PI * 2);
       ctx.fillStyle = i === 0 ? colorDim : color;
       ctx.fill();
-      ctx.strokeStyle = '#0a0a0f';
+      ctx.strokeStyle = '#ffffff';
       ctx.lineWidth = 2;
       ctx.stroke();
     });
