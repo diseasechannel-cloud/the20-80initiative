@@ -62,7 +62,7 @@
       height: 64px;
     }
     nav .logo { display: flex; align-items: center; }
-    nav .logo svg { height: 100px; width: auto; }
+    nav .logo svg { height: 56px; width: 56px; }
     nav .nav-links { display: flex; gap: 28px; list-style: none; }
     nav .nav-links a {
       color: var(--text-dim); font-size: .88rem; font-weight: 500;
@@ -589,7 +589,7 @@
       margin-bottom: 40px;
     }
     .footer-brand h4 { margin-bottom: 8px; }
-    .footer-brand h4 svg { height: 56px; width: auto; }
+    .footer-brand h4 svg { height: 80px; width: 80px; }
     .footer-brand p { font-size: .82rem; color: var(--text-dim); line-height: 1.6; }
 
     .footer-col h5 {
@@ -659,72 +659,22 @@
 <nav>
   <div class="nav-inner">
     <div class="logo">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550" role="img" aria-label="20-80 Initiative">
-        <defs>
-          <linearGradient id="nInfGrad" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#d4a32c"/>
-            <stop offset="40%" stop-color="#d4a32c"/>
-            <stop offset="60%" stop-color="#2a8c62"/>
-            <stop offset="100%" stop-color="#2a8c62"/>
-          </linearGradient>
-          <filter id="nGoldGlow">
-            <feGaussianBlur stdDeviation="4" result="blur"/>
-            <feFlood flood-color="#d4a32c" flood-opacity="0.3" result="color"/>
-            <feComposite in="color" in2="blur" operator="in" result="glow"/>
-            <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-          <filter id="nGreenGlow">
-            <feGaussianBlur stdDeviation="4" result="blur"/>
-            <feFlood flood-color="#2a8c62" flood-opacity="0.3" result="color"/>
-            <feComposite in="color" in2="blur" operator="in" result="glow"/>
-            <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-          <filter id="nShadow">
-            <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.2"/>
-          </filter>
-          <filter id="nParticleGlow">
-            <feGaussianBlur stdDeviation="3" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-        </defs>
-        <!-- Infinity loop -->
-        <path d="M450,220 C350,80 100,60 100,220 C100,380 350,360 450,220 C550,80 800,60 800,220 C800,380 550,360 450,220 Z"
-              fill="none" stroke="url(#nInfGrad)" stroke-width="8" stroke-linecap="round" filter="url(#nShadow)" opacity="0.9"/>
-        <path d="M450,220 C350,80 100,60 100,220 C100,380 350,360 450,220 C550,80 800,60 800,220 C800,380 550,360 450,220 Z"
-              fill="none" stroke="url(#nInfGrad)" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
-        <!-- Animated particles -->
-        <circle r="6" fill="#d4a32c" filter="url(#nParticleGlow)" opacity="0.9">
-          <animateMotion dur="5s" repeatCount="indefinite"
-            path="M450,220 C350,80 100,60 100,220 C100,380 350,360 450,220 C550,80 800,60 800,220 C800,380 550,360 450,220 Z"/>
-          <animate attributeName="fill" values="#d4a32c;#3bb878;#2a8c62;#3bb878;#d4a32c" dur="5s" repeatCount="indefinite"/>
-        </circle>
-        <circle r="4" fill="#d4a32c" filter="url(#nParticleGlow)" opacity="0.5">
-          <animateMotion dur="5s" repeatCount="indefinite" begin="-0.4s"
-            path="M450,220 C350,80 100,60 100,220 C100,380 350,360 450,220 C550,80 800,60 800,220 C800,380 550,360 450,220 Z"/>
-          <animate attributeName="fill" values="#d4a32c;#3bb878;#2a8c62;#3bb878;#d4a32c" dur="5s" repeatCount="indefinite" begin="-0.4s"/>
-        </circle>
-        <circle r="2.5" fill="#d4a32c" filter="url(#nParticleGlow)" opacity="0.3">
-          <animateMotion dur="5s" repeatCount="indefinite" begin="-0.8s"
-            path="M450,220 C350,80 100,60 100,220 C100,380 350,360 450,220 C550,80 800,60 800,220 C800,380 550,360 450,220 Z"/>
-          <animate attributeName="fill" values="#d4a32c;#3bb878;#2a8c62;#3bb878;#d4a32c" dur="5s" repeatCount="indefinite" begin="-0.8s"/>
-        </circle>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="20-80 Initiative">
+        <!-- Gold left half -->
+        <path d="M100,0 A100,100 0 0,0 100,200 A50,50 0 0,0 100,100 A50,50 0 0,1 100,0 Z" fill="#d4a32c"/>
+        <!-- Green right half -->
+        <path d="M100,0 A100,100 0 0,1 100,200 A50,50 0 0,1 100,100 A50,50 0 0,0 100,0 Z" fill="#2a8c62"/>
+        <!-- Yin-Yang dots -->
+        <circle cx="100" cy="50" r="8" fill="#2a8c62"/>
+        <circle cx="100" cy="150" r="8" fill="#d4a32c"/>
         <!-- "20" -->
-        <text x="260" y="262" text-anchor="middle" font-family="'Playfair Display','Georgia','Times New Roman',serif"
-              font-style="italic" font-weight="700" font-size="160" fill="#d4a32c" filter="url(#nGoldGlow)" opacity="0.9">20</text>
+        <text x="58" y="115" text-anchor="middle" font-family="'Playfair Display','Georgia','Times New Roman',serif"
+              font-style="italic" font-weight="700" font-size="42" fill="white">20</text>
         <!-- "80" -->
-        <g transform="translate(633, 262)">
-          <g transform="translate(0, -65) scale(1, 0.78) translate(0, 83)">
-            <text x="0" y="0" text-anchor="end" font-family="'Playfair Display','Georgia','Times New Roman',serif"
-                  font-style="italic" font-weight="700" font-size="160" fill="#2a8c62" filter="url(#nGreenGlow)" opacity="0.9">8</text>
-          </g>
-        </g>
-        <text x="640" y="262" text-anchor="start" font-family="'Playfair Display','Georgia','Times New Roman',serif"
-              font-style="italic" font-weight="700" font-size="160" fill="#2a8c62" filter="url(#nGreenGlow)" opacity="0.9">0</text>
-        <!-- INITIATIVE -->
-        <text x="450" y="380" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif"
-              font-size="36" font-weight="300" fill="#6b7f99" letter-spacing="18">INITIATIVE</text>
-        <!-- Center dot -->
-        <circle cx="450" cy="220" r="5" fill="url(#nInfGrad)" opacity="0.6"/>
+        <text x="142" y="115" text-anchor="middle" font-family="'Playfair Display','Georgia','Times New Roman',serif"
+              font-style="italic" font-weight="700" font-size="42" fill="white">80</text>
+        <!-- Outer ring -->
+        <circle cx="100" cy="100" r="97" fill="none" stroke="#333" stroke-width="2.5" opacity="0.15"/>
       </svg>
     </div>
     <ul class="nav-links">
@@ -1155,43 +1105,16 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <h4>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550" role="img" aria-label="20-80 Initiative" style="height:140px;width:auto;">
-            <defs>
-              <linearGradient id="fInfGrad" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stop-color="#d4a32c"/>
-                <stop offset="40%" stop-color="#d4a32c"/>
-                <stop offset="60%" stop-color="#2a8c62"/>
-                <stop offset="100%" stop-color="#2a8c62"/>
-              </linearGradient>
-              <filter id="fGoldGlow">
-                <feGaussianBlur stdDeviation="4" result="blur"/>
-                <feFlood flood-color="#d4a32c" flood-opacity="0.3" result="color"/>
-                <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
-              <filter id="fGreenGlow">
-                <feGaussianBlur stdDeviation="4" result="blur"/>
-                <feFlood flood-color="#2a8c62" flood-opacity="0.3" result="color"/>
-                <feComposite in="color" in2="blur" operator="in" result="glow"/>
-                <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
-              <filter id="fShadow">
-                <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.2"/>
-              </filter>
-            </defs>
-            <path d="M450,220 C350,80 100,60 100,220 C100,380 350,360 450,220 C550,80 800,60 800,220 C800,380 550,360 450,220 Z"
-                  fill="none" stroke="url(#fInfGrad)" stroke-width="8" stroke-linecap="round" filter="url(#fShadow)" opacity="0.9"/>
-            <text x="260" y="262" text-anchor="middle" font-family="'Playfair Display','Georgia','Times New Roman',serif"
-                  font-style="italic" font-weight="700" font-size="160" fill="#d4a32c" filter="url(#fGoldGlow)" opacity="0.9">20</text>
-            <g transform="translate(633, 262)"><g transform="translate(0, -65) scale(1, 0.78) translate(0, 83)">
-              <text x="0" y="0" text-anchor="end" font-family="'Playfair Display','Georgia','Times New Roman',serif"
-                    font-style="italic" font-weight="700" font-size="160" fill="#2a8c62" filter="url(#fGreenGlow)" opacity="0.9">8</text>
-            </g></g>
-            <text x="640" y="262" text-anchor="start" font-family="'Playfair Display','Georgia','Times New Roman',serif"
-                  font-style="italic" font-weight="700" font-size="160" fill="#2a8c62" filter="url(#fGreenGlow)" opacity="0.9">0</text>
-            <text x="450" y="380" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif"
-                  font-size="36" font-weight="300" fill="#6b7f99" letter-spacing="18">INITIATIVE</text>
-            <circle cx="450" cy="220" r="5" fill="url(#fInfGrad)" opacity="0.6"/>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="20-80 Initiative">
+            <path d="M100,0 A100,100 0 0,0 100,200 A50,50 0 0,0 100,100 A50,50 0 0,1 100,0 Z" fill="#d4a32c"/>
+            <path d="M100,0 A100,100 0 0,1 100,200 A50,50 0 0,1 100,100 A50,50 0 0,0 100,0 Z" fill="#2a8c62"/>
+            <circle cx="100" cy="50" r="8" fill="#2a8c62"/>
+            <circle cx="100" cy="150" r="8" fill="#d4a32c"/>
+            <text x="58" y="115" text-anchor="middle" font-family="'Playfair Display','Georgia','Times New Roman',serif"
+                  font-style="italic" font-weight="700" font-size="42" fill="white">20</text>
+            <text x="142" y="115" text-anchor="middle" font-family="'Playfair Display','Georgia','Times New Roman',serif"
+                  font-style="italic" font-weight="700" font-size="42" fill="white">80</text>
+            <circle cx="100" cy="100" r="97" fill="none" stroke="#333" stroke-width="2.5" opacity="0.15"/>
           </svg>
         </h4>
         <p>Rewriting the rules of aging through evidence-based protocols, community, and relentless curiosity.
